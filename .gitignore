@@ -1,0 +1,41 @@
+# Secrets and credentials
+.env
+.env.*
+*password*
+*secret*
+*credential*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Wazuh sensitive installation files
+wazuh-passwords.txt
+wazuh-install-files.tar
+
+# Logs and databases
+*.log
+*.db
+*.sqlite
+archives/
+logs/
+
+# Virtual machine files
+*.vdi
+*.vmdk
+*.vbox
+*.vbox-prev
+*.ova
+*.ovf
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.swp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
