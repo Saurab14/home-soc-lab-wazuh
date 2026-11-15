@@ -119,6 +119,58 @@ personal Windows host.
 \- MITRE ATT\&CK Framework
 
 
+## Lab Architecture
+
+The following diagram illustrates the virtualised SOC environment, including the Wazuh server and monitored endpoints connected through the VirtualBox host-only network.
+
+![Home SOC Lab Network Architecture](evidence/01_lab_network_topology.png)
+
+
+## Security Monitoring Dashboard
+
+The Wazuh dashboard provides centralised visibility into monitored endpoints, security events, and generated alerts.
+
+![Wazuh Dashboard Overview](evidence/02_wazuh_dashboard_overview.png)
+
+
+## Endpoint Integration and Monitoring
+
+The lab integrates Windows 11 and Kali Linux endpoints with the central Wazuh manager.
+
+
+### Windows Endpoint
+
+The Windows endpoint is registered with Wazuh and uses Sysmon to provide additional process-creation telemetry.
+
+![Windows Agent Active](evidence/04_windows_agent_active.png)
+
+
+### Kali Linux Endpoint
+
+The Kali Linux endpoint is integrated with the Wazuh manager for Linux security event monitoring.
+
+![Kali Linux Agent Active](evidence/06_kali_linux_active.png)
+
+
+## Detection and Alert Validation
+
+Custom Wazuh detection rules were implemented to identify selected Windows and Linux security events.
+
+### Linux Detection
+
+![Linux Custom Detection](evidence/07_linux_custom_detected_rule.png)
+
+
+### Windows Detection
+
+![Windows Custom Detection](evidence/08_windows_custom_detected_rule.png)
+
+
+## Additional Technical Evidence
+
+Further evidence covering Wazuh service status, Sysmon event collection, and detailed detection events is available in the [evidence directory](evidence/).
+
+
 
 \## Implemented Capabilities
 
